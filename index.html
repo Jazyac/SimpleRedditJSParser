@@ -17,7 +17,7 @@
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="CreateThreads.js"></script>
 
-<title>News</title>
+<title>Simple Reddit Parser</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -33,7 +33,8 @@
 				<ul>
 					<li><a href="#intro">What's This?</a></li>
 					<li><a href="#two">r/NEWS</a></li>
-					<li><a href="#three">More Info</a></li>
+					<li><a href="#three">Other subreddits</a></li>
+					<li><a href="#four">More Info</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -45,9 +46,12 @@
 		<!-- Intro -->
 		<section id="intro" class="wrapper style1 fullscreen fade-up">
 			<div class="inner">
-				<h1>Top News From Reddit!</h1>
+			
+			
+			
+				<h1>Simple reddit parser.</h1>
 				<p>This Webpage was created as a beginner's learning tool.It
-					parses the top threads from the r/NEWS subreddit and displays it.</p>
+					parses the top threads from any given subreddit and displays it.</p>
 
 			</div>
 		</section>
@@ -57,18 +61,37 @@
 				<!-- Two -->
 		<section id="two" class="wrapper style3 fade-up">
 			<div class="inner">
-				<h2>r/NEWS</h2>
+					<h2>r/NEWS</h2>
 				<p>Following are some of the currently popular threads on
 					r/NEWS.</p>
+				<div id="featuresNews" class="features"></div>
+				<ul class="actions">
+					<li><a id="VISITNews" href="https://www.reddit.com/r/news/top/" class="button" target="_blank">Visit r/NEWS</a></li>
+				</ul>
+			</div>
+		</section>
+
+		
+		<!-- Two -->
+		<section id="three" class="wrapper style3 fade-up">
+			<div class="inner">
+			<h2>Enter the name of the subreddit you would like to use.</h2>
+			r/<input type="text" id="subredditField" value="News" size="35">
+  <br>
+  
+  <input type="button" value="Fetch" onclick="submitFunct()">
+				
+				<p>Following are some of the currently popular threads on
+					the provided subreddit.</p>
 				<div id="features" class="features"></div>
 				<ul class="actions">
 					<li><a id="VISIT" href="https://www.reddit.com/r/news/top/" class="button" target="_blank">Visit r/NEWS</a></li>
 				</ul>
 			</div>
 		</section>
-
+		
 		<!-- Three -->
-		<section id="three" class="wrapper style1 fade-up">
+		<section id="four" class="wrapper style1 fade-up">
 			<div class="inner">
 				<h2>More Info</h2>
 
